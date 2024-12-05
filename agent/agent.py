@@ -2,12 +2,13 @@ from model.model import Net
 from model.trainer import QTrainer
 import numpy as np
 import torch
+from collections import deque
 
 class Agent:
 
     def __init__(self):
         self.lr = 0.001
-        self.epsilon = 0.01  # randomness
+        self.epsilon = 0.1  # randomness
         self.gamma = 0.9  # discount rate
         self.model = Net(11, 256, 3)
         self.trainer = QTrainer(self.model, lr=self.lr, gamma=self.gamma)

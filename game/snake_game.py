@@ -25,12 +25,11 @@ BLUE2 = (0, 100, 255)
 BLACK = (0, 0, 0)
 
 BLOCK_SIZE = 20
-SPEED = 10000
-
 
 class SnakeGame:
 
     def __init__(self, w=640, h=480):
+        self.speed = 10000
         self.w = w
         self.h = h
         # init display
@@ -144,7 +143,7 @@ class SnakeGame:
 
         # 5. update ui and clock
         self._update_ui()
-        self.clock.tick(SPEED)
+        self.clock.tick(self.speed)
         # 6. return game over and score
         return reward, game_over, self.score
 
