@@ -1,3 +1,5 @@
+import subprocess
+
 import torch
 
 from game.snake_game import SnakeGame
@@ -56,9 +58,13 @@ def play():
         if done:
             game.reset_game()
 
+def start_server():
+    subprocess.run(["python", "./server/server.py"])
+
 
 if __name__ == "__main__":
-    if not os.path.exists('./model/model.pth'):
+    if not os.path.exists('model/model.pth'):
         train_model()
-    else:
-        play()
+
+    # play()
+    start_server()

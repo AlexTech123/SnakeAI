@@ -2,7 +2,6 @@ from model.model import Net
 from model.trainer import QTrainer
 import numpy as np
 import torch
-from collections import deque
 
 class Agent:
 
