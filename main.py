@@ -60,7 +60,7 @@ def play():
             game.reset_game()
 
 def start_server():
-    subprocess.run(["python", "./server/server.py"])
+    subprocess.run(["python", "server/server.py"])
 
 
 if __name__ == "__main__":
