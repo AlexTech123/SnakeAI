@@ -41,6 +41,7 @@ def train_model():
 
             if n_games == 550:
                 agent.model.save()
+                break
 
 def play():
     game = SnakeGame()
